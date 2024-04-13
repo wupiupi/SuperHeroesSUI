@@ -8,17 +8,29 @@
 
 /* Begin PBXBuildFile section */
 		A0080E4C2BCA9A6400A26338 /* SuperHeroesSUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0080E4B2BCA9A6400A26338 /* SuperHeroesSUIApp.swift */; };
-		A0080E4E2BCA9A6400A26338 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0080E4D2BCA9A6400A26338 /* ContentView.swift */; };
 		A0080E502BCA9A6500A26338 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0080E4F2BCA9A6500A26338 /* Assets.xcassets */; };
 		A0080E532BCA9A6500A26338 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0080E522BCA9A6500A26338 /* Preview Assets.xcassets */; };
+		A0080E622BCA9E5F00A26338 /* HeroesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0080E612BCA9E5F00A26338 /* HeroesView.swift */; };
+		A0080E662BCA9E8E00A26338 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0080E652BCA9E8E00A26338 /* ViewModel.swift */; };
+		A0080E682BCA9EDA00A26338 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0080E672BCA9EDA00A26338 /* Hero.swift */; };
+		A0080E6B2BCAA67200A26338 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0080E6A2BCAA67200A26338 /* NetworkManager.swift */; };
+		A0C165222BCAE33F00E4E8AD /* HeroCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0C165212BCAE33F00E4E8AD /* HeroCellView.swift */; };
+		A0F1AC6C2BCAEB5200BAC721 /* HeroDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1AC6B2BCAEB5200BAC721 /* HeroDetailsView.swift */; };
+		A0F1AC6F2BCAEBC300BAC721 /* Extension + String.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0F1AC6E2BCAEBC300BAC721 /* Extension + String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A0080E482BCA9A6400A26338 /* SuperHeroesSUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperHeroesSUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0080E4B2BCA9A6400A26338 /* SuperHeroesSUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperHeroesSUIApp.swift; sourceTree = "<group>"; };
-		A0080E4D2BCA9A6400A26338 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A0080E4F2BCA9A6500A26338 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0080E522BCA9A6500A26338 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A0080E612BCA9E5F00A26338 /* HeroesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroesView.swift; sourceTree = "<group>"; };
+		A0080E652BCA9E8E00A26338 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		A0080E672BCA9EDA00A26338 /* Hero.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		A0080E6A2BCAA67200A26338 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A0C165212BCAE33F00E4E8AD /* HeroCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCellView.swift; sourceTree = "<group>"; };
+		A0F1AC6B2BCAEB5200BAC721 /* HeroDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroDetailsView.swift; sourceTree = "<group>"; };
+		A0F1AC6E2BCAEBC300BAC721 /* Extension + String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension + String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +63,13 @@
 		A0080E4A2BCA9A6400A26338 /* SuperHeroesSUI */ = {
 			isa = PBXGroup;
 			children = (
-				A0080E4B2BCA9A6400A26338 /* SuperHeroesSUIApp.swift */,
-				A0080E4D2BCA9A6400A26338 /* ContentView.swift */,
+				A0080E592BCA9A9E00A26338 /* App */,
 				A0080E4F2BCA9A6500A26338 /* Assets.xcassets */,
+				A0080E5A2BCA9AA700A26338 /* Components */,
+				A0080E5B2BCA9AB100A26338 /* Core */,
+				A0F1AC6D2BCAEBB700BAC721 /* Extensions */,
+				A0080E5C2BCA9ABB00A26338 /* Models */,
+				A0080E692BCAA66A00A26338 /* Supporting */,
 				A0080E512BCA9A6500A26338 /* Preview Content */,
 			);
 			path = SuperHeroesSUI;
@@ -65,6 +81,72 @@
 				A0080E522BCA9A6500A26338 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A0080E592BCA9A9E00A26338 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				A0080E4B2BCA9A6400A26338 /* SuperHeroesSUIApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		A0080E5A2BCA9AA700A26338 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				A0C165212BCAE33F00E4E8AD /* HeroCellView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		A0080E5B2BCA9AB100A26338 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				A0F1AC732BCAF7B000BAC721 /* View */,
+				A0F1AC742BCAF7B500BAC721 /* ViewModel */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		A0080E5C2BCA9ABB00A26338 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A0080E672BCA9EDA00A26338 /* Hero.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A0080E692BCAA66A00A26338 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				A0080E6A2BCAA67200A26338 /* NetworkManager.swift */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		A0F1AC6D2BCAEBB700BAC721 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A0F1AC6E2BCAEBC300BAC721 /* Extension + String.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		A0F1AC732BCAF7B000BAC721 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A0080E612BCA9E5F00A26338 /* HeroesView.swift */,
+				A0F1AC6B2BCAEB5200BAC721 /* HeroDetailsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A0F1AC742BCAF7B500BAC721 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				A0080E652BCA9E8E00A26338 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +219,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A0080E4E2BCA9A6400A26338 /* ContentView.swift in Sources */,
+				A0080E622BCA9E5F00A26338 /* HeroesView.swift in Sources */,
+				A0F1AC6C2BCAEB5200BAC721 /* HeroDetailsView.swift in Sources */,
+				A0F1AC6F2BCAEBC300BAC721 /* Extension + String.swift in Sources */,
 				A0080E4C2BCA9A6400A26338 /* SuperHeroesSUIApp.swift in Sources */,
+				A0C165222BCAE33F00E4E8AD /* HeroCellView.swift in Sources */,
+				A0080E6B2BCAA67200A26338 /* NetworkManager.swift in Sources */,
+				A0080E662BCA9E8E00A26338 /* ViewModel.swift in Sources */,
+				A0080E682BCA9EDA00A26338 /* Hero.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
