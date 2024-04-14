@@ -9,7 +9,7 @@ import Foundation
 
 struct SuperheroInfo: Decodable, Identifiable {
     let id: Int
-    let name: String?
+    let name: String
     let powerstats: Powerstat?
     let appearance: Appearance?
     let biography: Biography?

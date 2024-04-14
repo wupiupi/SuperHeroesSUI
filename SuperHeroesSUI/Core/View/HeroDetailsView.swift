@@ -26,7 +26,7 @@ struct HeroDetailsView: View {
                     HeroInfoView(hero: hero)
                 }
             }
-            .navigationTitle(hero.name ?? "")
+            .navigationTitle(hero.name)
         }
         .padding()
     }

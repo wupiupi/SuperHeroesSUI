@@ -27,7 +27,7 @@ struct HeroCellView: View {
                     .clipShape(Circle())
             }
             
-            Text(hero.name ?? "")
+            Text(hero.name)
                 .font(.title)
                 .padding(.leading, 10)
         }
