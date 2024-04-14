@@ -8,11 +8,27 @@
 import SwiftUI
 
 struct HeroImageView: View {
+    let imageURL: URL
+    let radius: CGFloat
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        AsyncImage(url: imageURL) { image in
+            image
+                .resizable()
+                .clipShape(Circle())
+                .frame(width: radius)
+            
+        } placeholder: {
+            Circle()
+                .foregroundStyle(.gray)
+                .frame(width: radius)
+        }
     }
 }
 
 #Preview {
-    HeroImageView()
+    HeroImageView(
+        imageURL: "https://www.memeatlas.com/images/wojaks/wojak-npc-bitcoin-helmet.jpg".url(),
+        radius: 250
+    )
 }
