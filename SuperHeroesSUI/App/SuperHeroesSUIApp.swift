@@ -13,8 +13,17 @@ struct SuperHeroesSUIApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HeroesView()
-                .environmentObject(contentViewVM)
+            TabView {
+                FavoritesHeroesView()
+                    .tabItem {
+                        Label("Favorites", systemImage: "star")
+                    }
+                HeroesListView()
+                    .tabItem {
+                        Label("Heroes", systemImage: "figure.roll")
+                    }
+            }
+            .environmentObject(contentViewVM)
         }
     }
 }

@@ -9,18 +9,18 @@ import SwiftUI
 
 struct HeroDetailsView: View {
     @EnvironmentObject private var viewModel: ViewModel
-    let hero: SuperheroInfo
+    
+    var hero: SuperheroInfo
     
     var body: some View {
         NavigationStack {
             ScrollView {
-                
                 VStack {
                     HeroImageView(
                         imageURL: (hero.images?.sm?.url())!,
                         radius: 250
                     )
-                    
+
                     Divider()
                     
                     HeroInfoView(hero: hero)
@@ -28,6 +28,18 @@ struct HeroDetailsView: View {
             }
             .navigationTitle(hero.name)
         }
+        .toolbar {
+            Button(action: {
+                viewModel.toggleFavoriteHero(hero)
+            }) {
+                Image(
+                    systemName: viewModel.checkIsHeroFavorite(hero)
+                    ? "star.fill"
+                    : "star"
+                )
+            }
+        }
+        .listStyle(.plain)
         .padding()
     }
 }
@@ -93,6 +105,4 @@ struct HeroInfoView: View {
 }
 
 // MARK: - Preview
-#Preview {
-    HeroDetailsView(hero: SuperheroInfo.getMockSuperHero())
-}
+

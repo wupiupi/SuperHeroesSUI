@@ -9,7 +9,8 @@ import Foundation
 
 final class ViewModel: ObservableObject {
     @Published var heroes: [SuperheroInfo] = []
-    
+    @Published var favoriteHeroes: [SuperheroInfo] = []
+        
     init() {
         fetchData()
     }
@@ -27,8 +28,14 @@ final class ViewModel: ObservableObject {
         }
     }
     
-    func getPlaceholderImageName() -> String {
-        let imageNumber = Int.random(in: 0...70)
-        return "temp\(imageNumber)"
+    func toggleFavoriteHero(_ hero: SuperheroInfo) {
+        checkIsHeroFavorite(hero)
+        ? favoriteHeroes.removeAll { $0.name == hero.name }
+        : favoriteHeroes.append(hero)
+    }
+    
+    func checkIsHeroFavorite(_ hero: SuperheroInfo) -> Bool {
+        favoriteHeroes.contains(where: { $0.id == hero.id })
     }
 }
+

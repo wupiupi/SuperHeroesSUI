@@ -20,11 +20,9 @@ struct HeroCellView: View {
                     .frame(width: 50)
                     .clipShape(Circle())
             } placeholder: {
-                Image(viewModel.getPlaceholderImageName(), bundle: nil)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
+                Circle()
+                    .foregroundStyle(.gray)
                     .frame(width: 50)
-                    .clipShape(Circle())
             }
             
             Text(hero.name)
