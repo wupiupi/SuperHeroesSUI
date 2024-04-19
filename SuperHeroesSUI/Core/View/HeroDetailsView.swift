@@ -26,6 +26,7 @@ struct HeroDetailsView: View {
                     HeroInfoView(hero: hero)
                 }
             }
+            .scrollIndicators(.hidden)
             .navigationTitle(hero.name)
         }
         .toolbar {
@@ -39,7 +40,6 @@ struct HeroDetailsView: View {
                 )
             }
         }
-        .listStyle(.plain)
         .padding()
     }
 }
