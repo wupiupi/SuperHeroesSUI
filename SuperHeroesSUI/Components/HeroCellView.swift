@@ -33,40 +33,5 @@ struct HeroCellView: View {
 }
 
 #Preview {
-    HeroCellView(
-        hero: SuperheroInfo(
-            id: 1,
-            name: "Pablo",
-            powerstats: Powerstat(
-                intelligence: 100,
-                strength: 100,
-                speed: 100,
-                durability: 100,
-                power: 100,
-                combat: 100
-            ),
-            appearance: Appearance(
-                gender: "Man",
-                race: "Human",
-                height: ["100"],
-                weight: ["100"],
-                eyeColor: "Black",
-                hairColor: "Black"
-            ),
-            biography: Biography(
-                fullName: "Pablo",
-                alterEgos: "Pablo",
-                placeOfBitrh: "Minsk",
-                firstAppearance: "Minsk",
-                publisher: "Belarus",
-                alignment: "left"
-            ),
-            images: ImageQuality(
-                xs: "https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/xs/1-a-bomb.jpg",
-                sm: "https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/sm/1-a-bomb.jpg",
-                md: "https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/md/1-a-bomb.jpg",
-                lg: "https://cdn.rawgit.com/akabab/superhero-api/0.2.0/api/images/lg/1-a-bomb.jpg"
-            )
-        )
-    )
+    HeroCellView(hero: SuperheroInfo.getMockSuperHero())
 }
