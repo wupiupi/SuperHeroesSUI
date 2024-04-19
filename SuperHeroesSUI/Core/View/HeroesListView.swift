@@ -30,6 +30,7 @@ struct HeroesListView: View {
                 ConnectionLostView()
             }
         }
+        .listStyle(.plain)
         .searchable(text: $searchTerm, prompt: "Search Heroes")
         .padding()
     }
