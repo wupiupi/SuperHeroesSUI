@@ -10,12 +10,12 @@ import Foundation
 final class ViewModel: ObservableObject {
     @Published var heroes: [SuperheroInfo] = []
     @Published var favoriteHeroes: [SuperheroInfo] = []
-        
+
+    private let networkManager = NetworkManager.shared
+    
     init() {
         fetchData()
     }
-    
-    private let networkManager = NetworkManager.shared
     
     func fetchData() {
         networkManager.fetchData(fromURL: Link.allHeroes.url) { result in
